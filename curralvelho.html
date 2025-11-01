@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title> Curral Velho - Exposição Virtual</title>
   <style>
+    /* ------------------------------------------------------------------- */
+    /* ESTILOS GERAIS E LAYOUT PRINCIPAL (FLEXBOX/GRID) */
+    /* ------------------------------------------------------------------- */
     body {
       margin: 0;
       font-family: "Georgia", serif;
@@ -23,19 +26,197 @@
       font-weight: bold;
     }
 
+    /* Contêiner que alinha a Foto (Post) e a Sidebar de Comentários */
+    .conteudo-principal {
+        display: flex;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 40px auto 20px;
+        gap: 20px; /* Espaço entre a foto e a sidebar */
+        padding: 0 10px;
+    }
+
+    /* ------------------------------------------------------------------- */
+    /* ESTILOS DA FOTO (POST) */
+    /* ------------------------------------------------------------------- */
+    .post-container {
+        flex-basis: 60%; /* Ocupa 60% do espaço principal */
+        max-width: 700px;
+        position: relative; 
+    }
+
     .imagem-container {
       text-align: center;
-      margin: 40px 0 20px;
+      position: relative;
     }
 
     .imagem-container img {
-      width: 90%;
-      max-width: 600px;
+      width: 100%;
+      height: auto;
       border: 5px solid #0055aa;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
+    
+    /* Novo Estilo: Posicionamento do Ícone de Comentário (Balão) */
+    .interacao-foto {
+        position: absolute;
+        bottom: -20px; /* Desloca o ícone para baixo da imagem */
+        right: -20px; /* Desloca o ícone para a direita da imagem */
+        z-index: 10;
+    }
+    
+    .icone-comentario {
+        /* Estilizando o balão de comentário como uma bolha */
+        width: 50px;
+        height: 50px;
+        background-color: #fcfcfc; /* Branco para simular o balão */
+        border: 2px solid #b30000; /* Borda vermelha */
+        border-radius: 50%; /* Torna o elemento redondo */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        cursor: pointer;
+        color: #b30000; /* Cor do emoji dentro do balão */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        transition: transform 0.2s, background-color 0.2s;
+    }
 
+    .icone-comentario:hover {
+        transform: scale(1.1);
+        background-color: #f7d000; /* Amarelo ao passar o mouse */
+    }
+
+    /* Pequena seta (opcional) para indicar que o balão aponta para o conteúdo */
+    .icone-comentario::after {
+        content: "";
+        position: absolute;
+        right: 1px;
+        bottom: 5px;
+        width: 10px;
+        height: 10px;
+        background-color: #fcfcfc;
+        border-bottom: 2px solid #b30000;
+        border-right: 2px solid #b30000;
+        transform: rotate(45deg);
+        z-index: 9;
+    }
+
+    /* ------------------------------------------------------------------- */
+    /* ESTILOS DA SIDEBAR DE COMENTÁRIOS (OCULTA POR PADRÃO) */
+    /* ------------------------------------------------------------------- */
+    .sidebar-comentarios {
+        flex-basis: 40%;
+        max-width: 450px;
+        background-color: #fcfcfc;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        border-top: 5px solid #b30000;
+
+        /* Garante que a sidebar comece FECHADA (aqui está o ajuste principal) */
+        display: none; 
+        transition: all 0.3s ease-in-out;
+    }
+
+    .sidebar-comentarios.aberto {
+        display: block; /* Apenas aparece quando a classe 'aberto' é adicionada via JS */
+    }
+
+    .header-sidebar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        color: #b30000;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-bottom: 2px solid #f7d000;
+        padding-bottom: 10px;
+    }
+
+    .botao-fechar {
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        font-weight: bold;
+        cursor: pointer;
+        color: #b30000;
+        transition: color 0.2s;
+    }
+    .botao-fechar:hover {
+        color: #ff4444;
+    }
+
+    /* ------------------------------------------------------------------- */
+    /* ESTILOS DO FORMULÁRIO (MANTIDOS) */
+    /* ------------------------------------------------------------------- */
+    .form-style {
+        padding: 10px 0;
+    }
+
+    .form-style h4 {
+        color: #b30000;
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+
+    .form-style input[type="text"], 
+    .form-style textarea {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 2px solid #0055aa;
+        border-radius: 8px;
+        box-sizing: border-box;
+        font-family: inherit;
+        font-size: 1em;
+    }
+    .form-style textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .form-style input:focus, .form-style textarea:focus {
+        border-color: #f7d000;
+        outline: none;
+        box-shadow: 0 0 5px rgba(247, 208, 0, 0.5);
+    }
+    
+    .form-style label {
+        display: none;
+    }
+
+    .form-style button[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background-color: #b30000;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.1em;
+        transition: background-color 0.3s ease;
+    }
+
+    .form-style button[type="submit"]:hover {
+        background-color: #8c0000;
+    }
+
+    .divisor-form {
+        width: 100%;
+        height: 4px;
+        background-color: #f7d000;
+        margin: 20px 0;
+    }
+
+    /* Outros elementos (Autor, Relato, Footer) e Responsividade mantidos... */
     .autor-container {
       text-align: center;
       margin-bottom: 20px;
@@ -63,7 +244,7 @@
       line-height: 1.7;
       box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     }
-
+    
     .voltar {
       display: block;
       margin: 40px auto;
@@ -87,20 +268,34 @@
     }
 
     /* Responsividade */
-    @media (max-width: 768px) {
-      header {
-        font-size: 1.5em;
-      }
+    @media (max-width: 992px) {
+        .conteudo-principal {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
 
-      .relato {
-        width: 90%;
-        font-size: 1em;
-      }
+        .post-container, .sidebar-comentarios {
+            flex-basis: auto;
+            width: 90%;
+            max-width: 600px;
+        }
 
-      .autor {
-        font-size: 1.1em;
-        padding: 8px 18px;
-      }
+        .sidebar-comentarios.aberto {
+            display: block;
+            /* Rola a página para o topo da sidebar quando aberta em mobile */
+            margin-top: 20px; 
+        }
+
+        /* Posiciona o ícone de forma mais interna em telas pequenas */
+        .interacao-foto {
+            bottom: 5px; 
+            right: 5px;
+        }
+
+        .icone-comentario::after {
+            display: none; /* Esconde a seta em mobile */
+        }
     }
   </style>
 </head>
@@ -110,27 +305,96 @@
     Curral Velho - Crateús/CE
   </header>
 
-  <!-- 1️⃣ Foto -->
-  <div class="imagem-container">
-    <img src="curralvelho.jpeg" alt="Foto de Palmares">
-  </div>
+  <div class="conteudo-principal">
 
-  <!-- 2️⃣ Autor -->
-  <div class="autor-container">
-    <p class="autor">Francisca Williana Gomes Bezerra</p>
-  </div>
+      <div class="post-container">
+          <div class="imagem-container">
+            <img src="curralvelho.jpeg" alt="Foto de Palmares">
+            
+            <div class="interacao-foto">
+                <span id="icone-comentar" class="icone-comentario" title="Deixar um Comentário">💬</span>
+            </div>
+          </div>
+          
+          <div class="autor-container" style="margin-top: 20px;">
+            <p class="autor">Francisca Williana Gomes Bezerra</p>
+          </div>
 
-  <!-- 3️⃣ Relato -->
-  <div class="relato">
-    <p>
-      Relato da autora. Aqui pode ser incluída a história, lembrança ou significado dessa fotografia, destacando o valor cultural e emocional da comunidade de Palmares.
-    </p>
+          <div class="relato" style="max-width: none; margin: 0;">
+            <p>
+              Relato da autora. Aqui pode ser incluída a história, lembrança ou significado dessa fotografia, destacando o valor cultural e emocional da comunidade de Palmares.
+            </p>
+          </div>
+      </div>
+      
+      <div id="sidebar-comentarios" class="sidebar-comentarios">
+          
+          <div class="header-sidebar">
+              <span>Deixe seu relato ou comentário ✍️</span>
+              <button id="botao-fechar" class="botao-fechar" title="Fechar Comentários">✕</button>
+          </div>
+
+          <div class="form-style">
+              <form id="form-comentario">
+                  
+                  <label for="nome">Seu nome</label>
+                  <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+
+                  <label for="comunidade">Sua comunidade (opcional)</label>
+                  <input type="text" id="comunidade" name="comunidade" placeholder="Sua comunidade (opcional)">
+                  
+                  <label for="relato-comentario">Escreva seu relato aqui...</label>
+                  <textarea id="relato-comentario" name="relato-comentario" required placeholder="Escreva seu relato aqui..."></textarea>
+                  
+                  <div class="divisor-form"></div>
+
+                  <button type="submit">Enviar</button>
+              </form>
+          </div>
+      </div>
   </div>
 
   <footer>
-    <a href="index.html" class="voltar">⬅ Voltar ao início</a>
+    <a href="index.html" class="voltar">⬅ Ver mais</a>
   </footer>
+  
+  <script>
+    const iconeComentar = document.getElementById('icone-comentar');
+    const sidebar = document.getElementById('sidebar-comentarios');
+    const botaoFechar = document.getElementById('botao-fechar');
+    const formComentario = document.getElementById('form-comentario');
+
+    // Função para abrir/fechar a sidebar
+    function toggleSidebar() {
+        const isOpen = sidebar.classList.toggle('aberto');
+
+        // Se estiver em mobile e abrindo, rola para a sidebar
+        if (isOpen && window.innerWidth <= 992) {
+            sidebar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    // Eventos para abrir a sidebar ao clicar no ícone
+    iconeComentar.addEventListener('click', toggleSidebar);
+
+    // Eventos para fechar a sidebar ao clicar no botão X
+    botaoFechar.addEventListener('click', toggleSidebar);
+
+    // Ação ao tentar enviar o formulário (simulação)
+    formComentario.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        
+        var nome = document.getElementById('nome').value;
+        var comunidade = document.getElementById('comunidade').value;
+        var comentario = document.getElementById('relato-comentario').value;
+        
+        alert('Relato enviado com sucesso (simulação)!\nNome: ' + nome + '\nComunidade: ' + (comunidade || 'Não informada') + '\nRelato: ' + comentario);
+        
+        // Limpar o formulário e fechar a sidebar
+        this.reset();
+        sidebar.classList.remove('aberto');
+    });
+  </script>
 
 </body>
 </html>
-
