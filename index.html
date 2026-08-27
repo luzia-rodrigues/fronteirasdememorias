@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pontos de Memórias</title>
+<style>
+  body {
+    background-image: url('fundo-sertao.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #a50000;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    padding: 15px;
+    border-bottom: 5px solid #f2c200;
+  }
+
+  .pontos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 60px auto;
+    flex-wrap: wrap;
+    max-width: 1000px;
+  }
+
+  .ponto {
+    text-align: center;
+    text-decoration: none;
+    color: #a50000;
+    font-weight: bold;
+    font-size: 18px;
+    transition: transform 0.3s;
+  }
+
+  .ponto img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #0033a0;
+    border-radius: 50%;
+    background-color: #f2c200;
+    padding: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  }
+
+  .ponto:hover img {
+    transform: scale(1.1);
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.4);
+  }
+
+  .ponto p {
+    margin-top: 10px;
+    background-color: #f2c200;
+    border: 2px solid #0033a0;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 6px 12px;
+  }
+
+  .comentarios {
+    background-color: rgba(255,255,255,0.92);
+    margin: 60px auto 120px;
+    max-width: 800px;
+    border-radius: 15px;
+    padding: 25px 30px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  }
+
+  .comentarios h2 {
+    color: #a50000;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+
+  input, textarea {
+    padding: 10px;
+    font-family: 'Georgia', serif;
+    border: 2px solid #0033a0;
+    border-radius: 8px;
+  }
+
+  .btn-enviar {
+    background-color: #a50000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 120px;
+    align-self: flex-end;
+  }
+
+  .btn-enviar:hover {
+    background-color: #800000;
+  }
+
+  .lista-comentarios {
+    border-top: 3px solid #f2c200;
+    padding-top: 15px;
+  }
+
+  .comentario {
+    background-color: #fdf3cc;
+    border: 2px solid #0033a0;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    position: relative; /* Para posicionar o botão de exclusão */
+  }
+
+  .comentario strong {
+    color: #a50000;
+  }
+  
+  /* Estilo para o botão de exclusão */
+  .btn-excluir {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #a50000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 1;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: none; /* Inicia oculto */
+    text-align: center;
+    padding: 0;
+  }
+
+  .comentario:hover .btn-excluir {
+    display: block; /* Mostra no hover */
+  }
+
+  .btn-excluir:hover {
+    background-color: #800000;
+  }
+
+
+  footer {
+    background-color: #a50000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    border-top: 3px solid #f2c200;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+  <header>Pontos de Memórias 🪶</header>
+
+  <div class="pontos">
+    <a href="curralvelho.html" class="ponto">
+      <img src="botao.jpg" alt="Curral Velho">
+      <p>Curral Velho</p>
+    </a>
+
+    <a href="ibiapaba.html" class="ponto">
+      <img src="botao.jpg" alt="Ibiapaba">
+      <p>Ibiapaba</p>
+    </a>
+
+    <a href="palmares.html" class="ponto">
+      <img src="botao.jpg" alt="Palmares II">
+      <p>Palmares II</p>
+    </a>
+
+    <a href="barradorio.html" class="ponto">
+      <img src="botao.jpg" alt="Barra do Rio">
+      <p>Barra do Rio</p>
+    </a>
+
+    <a href="poti.html" class="ponto">
+      <img src="botao.jpg" alt="Poti">
+      <p>Poti</p>
+    </a>
+
+    <a href="cabacas.html" class="ponto">
+      <img src="botao.jpg" alt="Cabaças">
+      <p>Cabaças</p>
+    </a>
+  </div>
+
+  <div class="comentarios">
+    <h2>Deixe seu relato ou comentário ✍️</h2>
+    <form id="formComentario">
+      <input type="text" id="nome" placeholder="Seu nome" required>
+      <input type="text" id="comunidade" placeholder="Sua comunidade (opcional)">
+      <textarea id="mensagem" rows="4" placeholder="Escreva seu relato aqui..." required></textarea>
+      <button class="btn-enviar" type="submit">Enviar</button>
+    </form>
+
+    <div class="lista-comentarios" id="listaComentarios"></div>
+  </div>
+
+  <footer>
+    Projeto Fronteiras de Memórias • UFC Crateús
+  </footer>
+
+<script>
+  // Variável para a senha secreta
+  const SENHA_ORGANIZADOR = "memorias2025";
+
+  // Função para escapar HTML
+  function escapeHtml(text) {
+    if (!text && text !== 0) return '';
+    return String(text)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;")
+      .replace(/\n/g, "<br>");
+  }
+
+  const form = document.getElementById('formComentario');
+  const lista = document.getElementById('listaComentarios');
+
+  /**
+   * Função para carregar e exibir os comentários, incluindo o botão de exclusão.
+   */
+  function carregarComentarios() {
+    const comentarios = JSON.parse(localStorage.getItem('comentarios') || '[]');
+    lista.innerHTML = '';
+
+    comentarios.forEach((c, index) => {
+      const div = document.createElement('div');
+      div.className = 'comentario';
+      div.innerHTML = `
+        <strong>${escapeHtml(c.nome)}</strong>
+        ${c.comunidade ? `(${escapeHtml(c.comunidade)})` : ''}:<br>
+        ${escapeHtml(c.mensagem)}
+        <button class="btn-excluir" data-index="${index}">x</button>
+      `;
+      lista.appendChild(div);
+    });
+    
+    // Adiciona event listeners aos novos botões
+    document.querySelectorAll('.btn-excluir').forEach(button => {
+        button.addEventListener('click', function() {
+            const indexParaDeletar = this.getAttribute('data-index');
+            excluirComentario(parseInt(indexParaDeletar));
+        });
+    });
+  }
+
+  /**
+   * Função para excluir um comentário específico pelo índice.
+   * @param {number} index - O índice do comentário a ser excluído.
+   */
+  function excluirComentario(index) {
+      const senha = prompt("Digite a senha de organizador para apagar este comentário:");
+      
+      if (senha === SENHA_ORGANIZADOR) {
+          if (confirm("Tem certeza que deseja apagar ESTE comentário?")) {
+              const comentarios = JSON.parse(localStorage.getItem('comentarios') || '[]');
+              
+              if (index > -1 && index < comentarios.length) {
+                  // Remove 1 elemento no índice especificado
+                  comentarios.splice(index, 1);
+                  localStorage.setItem('comentarios', JSON.stringify(comentarios));
+                  carregarComentarios(); // Recarrega a lista
+                  alert("Comentário apagado com sucesso!");
+              } else {
+                  alert("Erro: índice de comentário inválido.");
+              }
+          }
+      } else if (senha !== null) {
+          alert("Senha incorreta.");
+      }
+  }
+
+  // Evento de envio do formulário
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const nome = document.getElementById('nome').value.trim();
+    const comunidade = document.getElementById('comunidade').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+
+    if (!nome || !mensagem) {
+      alert('Por favor, preencha seu nome e comentário.');
+      return;
+    }
+
+    const comentarios = JSON.parse(localStorage.getItem('comentarios') || '[]');
+    comentarios.push({ nome, comunidade, mensagem });
+    localStorage.setItem('comentarios', JSON.stringify(comentarios));
+
+    form.reset();
+    carregarComentarios();
+  });
+
+  // Carrega os comentários na inicialização
+  carregarComentarios();
+
+  // A função secreta de atalho para apagar todos os comentários foi removida,
+  // pois agora a exclusão individual é a principal forma de moderação.
+  // Se quiser manter a função de limpeza total, insira-a aqui novamente.
+</script>
+</body>
+</html>
