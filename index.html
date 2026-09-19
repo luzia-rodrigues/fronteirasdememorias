@@ -4,215 +4,48 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Pontos de Memórias</title>
-<style>
-  body {
-    background-image: url('fundo-sertao.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: 'Georgia', serif;
-    margin: 0;
-    padding: 0;
-  }
-
-  header {
-    background-color: #a50000;
-    color: white;
-    text-align: center;
-    font-size: 28px;
-    padding: 15px;
-    border-bottom: 5px solid #f2c200;
-  }
-
-  .pontos {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    margin: 60px auto;
-    flex-wrap: wrap;
-    max-width: 1000px;
-  }
-
-  .ponto {
-    text-align: center;
-    text-decoration: none;
-    color: #a50000;
-    font-weight: bold;
-    font-size: 18px;
-    transition: transform 0.3s;
-  }
-
-  .ponto img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border: 5px solid #0033a0;
-    border-radius: 50%;
-    background-color: #f2c200;
-    padding: 5px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-  }
-
-  .ponto:hover img {
-    transform: scale(1.1);
-    box-shadow: 4px 4px 12px rgba(0,0,0,0.4);
-  }
-
-  .ponto p {
-    margin-top: 10px;
-    background-color: #f2c200;
-    border: 2px solid #0033a0;
-    border-radius: 10px;
-    display: inline-block;
-    padding: 6px 12px;
-  }
-
-  .comentarios {
-    background-color: rgba(255,255,255,0.92);
-    margin: 60px auto 120px;
-    max-width: 800px;
-    border-radius: 15px;
-    padding: 25px 30px;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-  }
-
-  .comentarios h2 {
-    color: #a50000;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 25px;
-  }
-
-  input, textarea {
-    padding: 10px;
-    font-family: 'Georgia', serif;
-    border: 2px solid #0033a0;
-    border-radius: 8px;
-  }
-
-  .btn-enviar {
-    background-color: #a50000;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 120px;
-    align-self: flex-end;
-  }
-
-  .btn-enviar:hover {
-    background-color: #800000;
-  }
-
-  .lista-comentarios {
-    border-top: 3px solid #f2c200;
-    padding-top: 15px;
-  }
-
-  .comentario {
-    background-color: #fdf3cc;
-    border: 2px solid #0033a0;
-    border-radius: 10px;
-    padding: 10px 15px;
-    margin-bottom: 15px;
-    position: relative; /* Para posicionar o botão de exclusão */
-  }
-
-  .comentario strong {
-    color: #a50000;
-  }
-  
-  /* Estilo para o botão de exclusão */
-  .btn-excluir {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background: #a50000;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    line-height: 1;
-    font-size: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: none; /* Inicia oculto */
-    text-align: center;
-    padding: 0;
-  }
-
-  .comentario:hover .btn-excluir {
-    display: block; /* Mostra no hover */
-  }
-
-  .btn-excluir:hover {
-    background-color: #800000;
-  }
-
-
-  footer {
-    background-color: #a50000;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    font-weight: bold;
-    font-family: 'Georgia', serif;
-    border-top: 3px solid #f2c200;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-</style>
+  <!-- CSS compartilhado por todas as páginas do site (ver estilos.css) -->
+  <link rel="stylesheet" href="./style/estilos.css">
 </head>
-<body>
+<!-- A classe "pagina-inicial" no body diz ao estilos.css qual conjunto de
+     regras usar nesta página (veja o comentário no topo do estilos.css) -->
+<body class="pagina-inicial">
   <header>Pontos de Memórias 🪶</header>
 
+  <!-- 1️⃣ Grade de "pontos": cada link leva para a página de relato daquele lugar -->
   <div class="pontos">
-    <a href="curralvelho.html" class="ponto">
-      <img src="botao.jpg" alt="Curral Velho">
+    <a href="./pages/curral velho/curralvelho.html" class="ponto">
+      <img src="./images/botao.jpg" alt="Curral Velho">
       <p>Curral Velho</p>
     </a>
 
-    <a href="ibiapaba.html" class="ponto">
-      <img src="botao.jpg" alt="Ibiapaba">
+    <a href="./pages/ibiapaba/ibiapaba.html" class="ponto">
+      <img src="./images/botao.jpg" alt="Ibiapaba">
       <p>Ibiapaba</p>
     </a>
 
-    <a href="palmares.html" class="ponto">
-      <img src="botao.jpg" alt="Palmares II">
+    <a href="./pages/palmares/palmares.html" class="ponto">
+      <img src="./images/botao.jpg" alt="Palmares II">
       <p>Palmares II</p>
     </a>
 
-    <a href="barradorio.html" class="ponto">
-      <img src="botao.jpg" alt="Barra do Rio">
+    <a href="./pages/barra do rio/barradorio.html" class="ponto">
+      <img src="./images/botao.jpg" alt="Barra do Rio">
       <p>Barra do Rio</p>
     </a>
 
-    <a href="poti.html" class="ponto">
-      <img src="botao.jpg" alt="Poti">
+    <a href="./pages/poti/poti.html" class="ponto">
+      <img src="./images/botao.jpg" alt="Poti">
       <p>Poti</p>
     </a>
 
-    <a href="cabacas.html" class="ponto">
-      <img src="botao.jpg" alt="Cabaças">
+    <a href="./pages/cabaças/cabacas.html" class="ponto">
+      <img src="./images/botao.jpg" alt="Cabaças">
       <p>Cabaças</p>
     </a>
   </div>
 
+  <!-- 2️⃣ Formulário de comentários gerais (fica salvo no localStorage do navegador) -->
   <div class="comentarios">
     <h2>Deixe seu relato ou comentário ✍️</h2>
     <form id="formComentario">
@@ -229,6 +62,7 @@
     Projeto Fronteiras de Memórias • UFC Crateús
   </footer>
 
+<!-- Script: salva/lê os comentários no localStorage e controla a exclusão protegida por senha -->
 <script>
   // Variável para a senha secreta
   const SENHA_ORGANIZADOR = "memorias2025";
