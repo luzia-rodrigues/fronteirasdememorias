@@ -12,7 +12,11 @@
 }
 
 body, html {
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
     padding: 20px;
     background-color: var(--cor1);
 }
@@ -24,6 +28,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 50px;
+    width: 900px;
     border-radius: 40px 40px 0px 0px;
 }
 
@@ -40,7 +45,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 900px;
     height: 30px;
     margin-top: auto;
     background-color: var(--cor2);
@@ -70,14 +75,14 @@ main {
 }
 
 .container-head > h1 {
-    width: 350px;
+    max-width: 600px;
     text-align: center;
     margin: 20px;
     color: var(--cor2);
 }
 
 .container-head > p {
-    width: 600px;
+    max-width: 800px;
     text-align: center;
 }
 
