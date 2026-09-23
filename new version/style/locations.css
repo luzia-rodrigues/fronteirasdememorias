@@ -1,0 +1,81 @@
+:root {
+    --cor1: #FFEB91;
+    --cor2: #DF0036;
+    --cor3: #009ACD;
+    --cor4: #009A37;
+    --cor5: #FDD000;
+}
+
+.container-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 50px 0px; 
+    width: 1000px;
+}
+
+.container-location {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1000px;
+    height: 500px;
+    padding: 10px;
+}
+
+.location-image {
+    width: 1000px;
+    height: 500px;
+    border-radius: 20px;
+    background-image: url('../../images/curralvelho.jpeg');
+    background-size: cover;
+    background-position: -220px center;
+    background-repeat: no-repeat;
+    background-color: blue;
+}
+
+.location-info {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    text-align: justify;
+    justify-content: space-between;
+}
+
+h1 {
+    color: var(--cor2);
+}
+
+.description > p {
+    margin: 8px 0px;
+}
+
+.comments {
+    padding: 10px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: var(--cor4);
+}
+
+.comment-header {
+    display: flex;
+    gap: 15px;
+}
+
+.commentator-name {
+    font-weight: bold;
+}
+
+.commentator-location {
+    font-size: 13px;
+    font-weight: 100;
+}
+
+.comments > p {
+    margin: 15px 0px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(227, 227, 227);
+}
