@@ -33,6 +33,7 @@ main {
 }
 
 #text-local {
+    font-size: 3em;
     color: var(--cor2);
 }
 
@@ -47,8 +48,7 @@ main > p {
     flex-direction: column;
     gap: 40px;
     margin-top: 0px;
-    width: 100%;
-    margin: 0px 0px;
+    width: 80%; 
 }
 
 .location {
@@ -56,15 +56,16 @@ main > p {
     background-color: var(--cor1);
     border-radius: 40px; 
     border: solid 3px var(--cor2);
-    height: 200px;
+    height: 300px;
 }
 
 .location-info {
     position: absolute;
-    top: 70px;
+    top: 100px;
     left: 70px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .location-info > p {
@@ -84,15 +85,15 @@ main > p {
 }
 
 #ibiapaba {
-    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 70%) 300px 0px / cover no-repeat, url('../../images/ibiapaba.jpeg') 300px -70px / cover no-repeat;
+    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 70%) 300px 0px / cover no-repeat, url('../../images/ibiapaba.jpeg') 300px -150px / cover no-repeat;
 }
 
 #palmares {
-    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 70%) 300px 0px / cover no-repeat, url('../../images/palmares.jpeg') 300px -300px / cover no-repeat;
+    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 70%) 300px 0px / cover no-repeat, url('../../images/palmares.jpeg') 300px -350px / cover no-repeat;
 }
 
 #barra-do-rio {
-    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 90%) 300px 0px / cover no-repeat, url('../../images/barra1.jpeg') 300px -130px / cover no-repeat;
+    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 90%) 300px 0px / cover no-repeat, url('../../images/barra1.jpeg') 300px -280px / cover no-repeat;
 }
 
 #poti {
@@ -100,5 +101,5 @@ main > p {
 }
 
 #cabacas {
-    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 65%) 300px 0px / cover no-repeat, url('../../images/cabaças.jpeg') 300px -65px / cover no-repeat;
+    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 65%) 300px 0px / cover no-repeat, url('../../images/cabaças.jpeg') 300px -100px / cover no-repeat;
 }
