@@ -1,115 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Ibiapaba - Exposição Virtual</title>
-  <!-- CSS compartilhado por todas as páginas do site (ver estilos.css) -->
-  <link rel="stylesheet" href="../../style/estilos.css">
+  <title>Localidade - Ibiapaba</title>
+  <link rel="stylesheet" href="../../style/reset.css">
+  <link rel="stylesheet" href="../../style/header.css">
+  <link rel="stylesheet" href="../../style/locations.css">
+  <link rel="stylesheet" href="../../style/rodape.css">
 </head>
-<!-- A classe "pagina-relato-interativa" no body diz ao estilos.css qual conjunto de
-     regras usar nesta página (veja o comentário no topo do estilos.css) -->
-<body class="pagina-relato-interativa">
+<body>
+    <header>
+      <div id="logo">
+          <img src="../../../images/logo_pontosdememoria.png" alt="Logo">
+          <p>Pontos de <strong>Memória</strong></p>
+      </div>
+        
+    </header>
 
-  <header>
-    Ibiapaba - Crateús/CE
-  </header>
+    <nav>
+      <ul>
+          <li>Sobre o projeto</li>
+          <li>Localidades</li>
+          <li>Quem somos</li>
+      </ul>
+    </nav>
 
-  <div class="conteudo-principal">
+    <main>
 
-      <!-- 1️⃣ Foto, com o ícone de comentário no canto -->
-      <div class="post-container">
-          <div class="imagem-container">
-            <img src="../../images/ibiapaba.jpeg" alt="Foto de Ibiapaba">
-            
-            <div class="interacao-foto">
-                <span id="icone-comentar" class="icone-comentario" title="Deixar um Comentário">💬</span>
+      <div class="container-info">
+        <h1>Ibiapaba</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi nam corrupti ratione possimus veniam corporis. Soluta nisi aliquam eligendi dolorum explicabo quos! Ut possimus inventore modi, ratione veritatis doloribus atque?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae eum sint quaerat quas minus expedita, accusamus id! Ea, eligendi libero sit dolor sapiente repudiandae iste distinctio similique, ipsum aliquid impedit.lorem 
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, laboriosam reprehenderit. Vel rem quam ut blanditiis! Iusto itaque optio quod, delectus incidunt consequuntur fugiat at aspernatur laboriosam. Facilis, ullam iusto?
+        </p>
+      </div>
+
+      <section class="container-location">
+
+        <img class="location-image" src="../../../images/ibiapaba.jpeg" alt="Ibiapaba">
+        
+        <div class="location-info">
+
+          <div class="description">
+            <h1>Titulo</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti laudantium ullam corporis, minima, placeat alias repudiandae blanditiis facilis rerum dolores modi id aspernatur eligendi eum. Optio atque sed esse corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis rerum aut tenetur debitis quos sed deleniti, maiores aperiam vel molestiae nisi optio nesciunt assumenda exercitationem quam sit fugiat deserunt ab.</p>
+            <p><strong>Nome do autor</strong></p>
+          </div>
+
+          <img src="../../../images/message.png" alt="Message ballon">
+
+          <div class="comments">
+            <div class="comment-header">
+              <img src="../../../images/user.png" alt="user">
+              <div>
+                <p class="commentator-name">Autor do comentário</p>
+                <p class="commentator-location">Localidade</p>
+              </div>
             </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni cumque voluptate iure, voluptatum beatae sapiente nulla officiis optio officia modi saepe non neque illo quis magnam maxime quia repellendus ducimus! lorem</p>
+            <a href="#">Ver mair comentários</a>
           </div>
-          
-          <!-- 2️⃣ Autor -->
-          <div class="autor-container" style="margin-top: 20px;">
-            <p class="autor">Antônia Mariana Alves da Silva</p>
-          </div>
+        </div>
+      </section>
 
-          <!-- 3️⃣ Relato -->
-          <div class="relato" style="max-width: none; margin: 0;">
-            <p>
-              Relato da autora. Aqui pode ser incluída a história, lembrança ou significado dessa fotografia, destacando o valor cultural e emocional da comunidade de Palmares.
-            </p>
-          </div>
-      </div>
-      
-      <!-- 4️⃣ Sidebar de comentários (começa fechada, veja .sidebar-comentarios no estilos.css) -->
-      <div id="sidebar-comentarios" class="sidebar-comentarios">
-          
-          <div class="header-sidebar">
-              <span>Deixe seu relato ou comentário ✍️</span>
-              <button id="botao-fechar" class="botao-fechar" title="Fechar Comentários">✕</button>
-          </div>
+    </main>
 
-          <div class="form-style">
-              <form id="form-comentario">
-                  
-                  <label for="nome">Seu nome</label>
-                  <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+    <footer>
+        <div class="rodape">
+            <ul>
+                <li><img src="../../../images/Logo Fronteira de Memórias.svg" alt="Logo"></img></li>
+                <li><img src="../../../images/Logo Gepia.svg" alt="Logo"></img></li>
+                <li><img src="../../../images/UFC.png" alt="Logo"></img></li>
+            </ul>
 
-                  <label for="comunidade">Sua comunidade (opcional)</label>
-                  <input type="text" id="comunidade" name="comunidade" placeholder="Sua comunidade (opcional)">
-                  
-                  <label for="relato-comentario">Escreva seu relato aqui...</label>
-                  <textarea id="relato-comentario" name="relato-comentario" required placeholder="Escreva seu relato aqui..."></textarea>
-                  
-                  <div class="divisor-form"></div>
+            <p id="social-media">Siga <a href="https://instagram.com/gepiaufc" target="_blank">@gepiaufc</a></p>
 
-                  <button type="submit">Enviar</button>
-              </form>
-          </div>
-      </div>
-  </div>
+            <p id="copy">2026 - Todos os direitos reservados</p>
 
-  <footer>
-    <a href="../../index.html" class="voltar">⬅ Ver mais</a>
-  </footer>
-  
-  <!-- Script: controla a abertura/fechamento da sidebar e o envio (simulado) do formulário -->
-  <script>
-    const iconeComentar = document.getElementById('icone-comentar');
-    const sidebar = document.getElementById('sidebar-comentarios');
-    const botaoFechar = document.getElementById('botao-fechar');
-    const formComentario = document.getElementById('form-comentario');
-
-    // Função para abrir/fechar a sidebar
-    function toggleSidebar() {
-        const isOpen = sidebar.classList.toggle('aberto');
-
-        // Se estiver em mobile e abrindo, rola para a sidebar
-        if (isOpen && window.innerWidth <= 992) {
-            sidebar.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }
-
-    // Eventos para abrir a sidebar ao clicar no ícone
-    iconeComentar.addEventListener('click', toggleSidebar);
-
-    // Eventos para fechar a sidebar ao clicar no botão X
-    botaoFechar.addEventListener('click', toggleSidebar);
-
-    // Ação ao tentar enviar o formulário (simulação)
-    formComentario.addEventListener('submit', function(event) {
-        event.preventDefault(); 
-        
-        var nome = document.getElementById('nome').value;
-        var comunidade = document.getElementById('comunidade').value;
-        var comentario = document.getElementById('relato-comentario').value;
-        
-        alert('Relato enviado com sucesso (simulação)!\nNome: ' + nome + '\nComunidade: ' + (comunidade || 'Não informada') + '\nRelato: ' + comentario);
-        
-        // Limpar o formulário e fechar a sidebar
-        this.reset();
-        sidebar.classList.remove('aberto');
-    });
-  </script>
+        </div>
+    </footer>
 
 </body>
 </html>
