@@ -1,11 +1,3 @@
-:root {
-    --cor1: #FFEB91;
-    --cor2: #DF0036;
-    --cor3: #009ACD;
-    --cor4: #009A37;
-    --cor5: #FDD000;
-}
-
 main {
     width: 80%;
     display: flex;
