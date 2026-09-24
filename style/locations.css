@@ -26,16 +26,21 @@ main {
 .container-location {
     display: flex;
     justify-content: space-between;
-    gap: 30px;
+    gap: 20px;
     max-width: 100%;
     height: 500px;
     padding: 10px;
+    margin-bottom: 100px;
 }
 
 .location-image {
-    max-width: 1000px;
+    width: 150%;
     border-radius: 20px;
     border: solid 2px var(--cor2);
+}
+
+#curralvelho-image, #ibiapaba-image, #poti1-image{
+    max-width: 68%;
 }
 
 .location-info {
