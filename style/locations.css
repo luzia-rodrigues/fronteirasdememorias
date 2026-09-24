@@ -1,0 +1,95 @@
+main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 50px 0px; 
+    width: 100%;
+}
+
+.container-location {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 100%;
+    height: 500px;
+    padding: 10px;
+    margin-bottom: 100px;
+}
+
+.location-image {
+    width: 150%;
+    border-radius: 20px;
+    border: solid 2px var(--cor2);
+}
+
+#curralvelho-image, #ibiapaba-image, #poti1-image{
+    max-width: 68%;
+}
+
+.location-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    text-align: justify;
+    justify-content: space-between;
+}
+
+.location-info > img {
+    position: absolute;
+    right: 10px;
+    bottom: 213px;
+    width: 50px;
+    height: 50px;
+}
+
+h1 {
+    color: var(--cor2);
+}
+
+.description > p {
+    margin: 8px 0px;
+}
+
+.comments {
+    padding: 10px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: var(--cor4);
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.comment-header > img {
+    width: 40px;
+    height: 40px;
+}
+
+.commentator-name {
+    font-weight: bold;
+}
+
+.commentator-location {
+    font-size: 13px;
+    font-weight: 100;
+}
+
+.comments > p {
+    margin: 15px 0px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(227, 227, 227);
+}

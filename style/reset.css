@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/Merriweather-Italic-VariableFont.ttf') format("truetype");
+    font-weight: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --cor1: #FFEB91;
+    --cor2: #DF0036;
+    --cor3: #009ACD;
+    --cor4: #009A37;
+    --cor5: #FDD000;
+}
+
+body, html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--cor1);
+    font-family: 'Merriweather';
+}

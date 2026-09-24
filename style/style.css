@@ -1,0 +1,116 @@
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 60px 0px;
+    align-items: center;
+}
+
+h1 {
+     font-weight: 900;
+}
+
+.container-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-head > h1 {
+    font-weight: 700;
+    max-width: 600px;
+    text-align: center;
+    margin: 20px;
+    color: var(--cor2);
+}
+
+.container-head > p {
+    font-weight: 700;
+    max-width: 800px;
+    text-align: center;
+}
+
+#text-local {
+    font-weight: 900;
+    font-size: 3em;
+    color: var(--cor2);
+}
+
+main > p {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin: 100px 0px 30px 0px;
+}
+
+.container-locations {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 0px;
+    width: 80%; 
+}
+
+.location {
+    position: relative;
+    background-color: var(--cor1);
+    border-radius: 40px; 
+    border: solid 3px var(--cor2);
+    height: 300px;
+}
+
+.location-info {
+    position: absolute;
+    top: 100px;
+    left: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.location-info p, a {
+    font-weight: 900;
+}
+
+.location-info > p {
+    font-size: 2em;
+}
+
+.location-info > a {
+    background-color: red;
+    padding: 6px 45px;
+    border-radius: 15px;
+    color: white;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.location-info > a:hover{
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.211);
+    transform: scale(1.05);
+}
+
+#curral-velho {
+    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 70%) 300px 0px / cover no-repeat, url('../../images/curralvelho.jpeg') 300px 0px / cover no-repeat;
+}
+
+#ibiapaba {
+    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 70%) 300px 0px / cover no-repeat, url('../../images/ibiapaba.jpeg') 300px -150px / cover no-repeat;
+}
+
+#palmares {
+    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 70%) 300px 0px / cover no-repeat, url('../../images/palmares.jpeg') 300px -350px / cover no-repeat;
+}
+
+#barra-do-rio {
+    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 90%) 300px 0px / cover no-repeat, url('../../images/barra1.jpeg') 300px -280px / cover no-repeat;
+}
+
+#poti {
+    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 65%) 295px 0px / cover no-repeat, url('../../images/poti1.jpeg') 295px -125px / cover no-repeat;
+}
+
+#cabacas {
+    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 65%) 300px 0px / cover no-repeat, url('../../images/cabaças.jpeg') 300px -100px / cover no-repeat;
+}
