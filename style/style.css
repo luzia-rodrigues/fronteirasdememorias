@@ -92,25 +92,25 @@ main > p {
 }
 
 #curral-velho {
-    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 70%) 300px 0px / cover no-repeat, url('../../images/curralvelho.jpeg') 300px 0px / cover no-repeat;
+    background: linear-gradient(to right, var(--cor1) 24%, rgba(0, 0, 0, 0)), url('../../images/curralvelho.jpeg') 300px 0px / cover no-repeat;
 }
 
 #ibiapaba {
-    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 70%) 0px 0px / cover no-repeat, url('../../images/ibiapaba.jpeg') 300px -150px / cover no-repeat;
+    background: linear-gradient(to right, var(--cor1) 24%, rgba(0, 0, 0, 0)), url('../../images/ibiapaba.jpeg') 300px -150px / cover no-repeat;
 }
 
 #palmares {
-    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 70%) 300px 0px / cover no-repeat, url('../../images/palmares.jpeg') 300px -350px / cover no-repeat;
+    background: linear-gradient(to right, var(--cor1) 24%, rgba(0, 0, 0, 0)), url('../../images/palmares.jpeg') 300px -350px / cover no-repeat;
 }
 
 #barra-do-rio {
-    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 90%) 300px 0px / cover no-repeat, url('../../images/barra1.jpeg') 300px -280px / cover no-repeat;
+    background: linear-gradient(to right, var(--cor1) 24%, rgba(0, 0, 0, 0)), url('../../images/barra1.jpeg') 300px -280px / cover no-repeat;
 }
 
 #poti {
-    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 65%) 295px 0px / cover no-repeat, url('../../images/poti1.jpeg') 295px -125px / cover no-repeat;
+    background: linear-gradient(to right, var(--cor1) 26%, rgba(0, 0, 0, 0)), url('../../images/poti1.jpeg') 295px -125px / cover no-repeat;
 }
 
 #cabacas {
-    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 65%) 300px 0px / cover no-repeat, url('../../images/cabaças.jpeg') 300px -100px / cover no-repeat;
+    background: linear-gradient(to right, var(--cor1) 24%, rgba(0, 0, 0, 0)), url('../../images/cabaças.jpeg') 300px -100px / cover no-repeat;
 }
