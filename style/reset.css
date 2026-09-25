@@ -25,4 +25,6 @@ body, html {
     width: 100%;
     background-color: var(--cor1);
     font-family: 'Merriweather';
+    background-image: url('../images/vetor-de-fundo-branco-de-texturas-de-onda.png');
+    background-blend-mode: color-burn;
 }

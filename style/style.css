@@ -96,7 +96,7 @@ main > p {
 }
 
 #ibiapaba {
-    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 70%) 300px 0px / cover no-repeat, url('../../images/ibiapaba.jpeg') 300px -150px / cover no-repeat;
+    background: linear-gradient(to right, var(--cor1), rgba(0, 0, 0, 0) 70%) 0px 0px / cover no-repeat, url('../../images/ibiapaba.jpeg') 300px -150px / cover no-repeat;
 }
 
 #palmares {
